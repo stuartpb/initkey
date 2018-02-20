@@ -1,0 +1,32 @@
+[hidden] {
+  display: none !important;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  max-width: 800px;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+}
+
+button, .button {
+  text-decoration: none;
+  color: black;
+  background: #ddd;
+  border: none;
+  padding: 4px;
+  border-radius: 2px;
+}
+button.primary, .button.primary {
+  color: white;
+  background: #88f;
+}
+textarea {
+  resize: none;
+}

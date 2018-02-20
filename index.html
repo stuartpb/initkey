@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>initkey</title>
+    <link rel="stylesheet" href="base.css">
+  </head>
+  <body>
+    <form id="parameters">
+      <label>Bit length: <input type="number" id="bitlength" value="2048"></label>
+      <label>Public key comment: <input type="text" id="comment" value=""></label>
+      <button type="submit" id="generate">Generate</button>
+    </form>
+    <div id="progress" hidden>
+      <div class="unflaired">Generating...</div>
+      <div class="half-circle-spinner">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+      </div>
+    </div>
+    <div id="key-parts" class="column" hidden>
+      <div id="fingerprint"></div>
+      <div>
+        <a class="button primary" download="id_rsa" id="save-private">Save private key</a>
+        <button type="button" id="show-private">Show private key</button>
+      </div>
+      <div id="private-key" hidden></div>
+      <textarea id="pubkey"></textarea>
+      <div>
+        <a class="button" download="id_rsa.pub" id="save-public">Save public key</a>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js"></script>
+    <script src="core.js"></script>
+    <link rel="stylesheet" href="flair.css">
+  </body>
+</html>
